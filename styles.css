@@ -1,0 +1,58 @@
+body {
+    background-color: #0a0a0a;
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero .highlight {
+    color: #00ffcc;
+}
+
+.about, .who-we-are, .benefits, .features, .pricing, .contact {
+    padding: 60px 20px;
+}
+
+.about h2, .who-we-are h2, .benefits h2, .features h2, .pricing h2, .contact h2 {
+    color: #00ffcc;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.contact-form .form-control {
+    background-color: #1c1c1c;
+    color: white;
+    border: none;
+}
+
+.contact-form .form-control::placeholder {
+    color: #cccccc;
+}
+
+footer {
+    background-color: #1c1c1c;
+}
+
+.btn-primary {
+    background-color: #00ffcc;
+    border-color: #00ffcc;
+}
+
+.btn-outline-light {
+    color: #ffffff;
+    border-color: #00ffcc;
+}
+
+.btn-outline-light:hover {
+    background-color: #00ffcc;
+    color: black;
+}
