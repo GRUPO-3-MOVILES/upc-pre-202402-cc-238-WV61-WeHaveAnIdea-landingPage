@@ -1,58 +1,187 @@
-body {
-    background-color: #0a0a0a;
-    color: white;
+/* Hero Section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('assets/background_image.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.23); /* Capa de transparencia */
+    box-shadow: inset -2px -61px 100px 20px rgba(0, 7, 12, 1); /* Sombra interna */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Para que el texto esté encima de la capa de sombra y transparencia */
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Estilos de Título del Hero */
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #e0e0e0;
+}
+
+.hero-title .highlight {
+    color: #00f7ff; /* Color azul para "BEST" y "AI" */
+    font-weight: bold;
+}
+
+/* Ajuste de tamaño del texto en pantallas más grandes */
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-title {
+        font-size: 6rem;
+    }
+}
+
+/* Botón personalizado */
+.btn-primary {
+    background-color: #3a4f63;
+    border-color: #3a4f63;
+    padding: 12px 30px;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    color: #ffffff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #475a6d;
+    border-color: #475a6d;
+}
+
+/* Navbar adjustments */
+.navbar {
+    background-color: transparent !important;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-brand {
+    font-size: 2.5rem;
+    color: #B2F1ED !important;
 }
 
 .navbar-nav .nav-link {
     color: white !important;
+    margin-right: 1rem;
+    font-size: 1rem;
 }
 
-.hero h1 {
-    font-size: 3rem;
-}
-
-.hero .highlight {
-    color: #00ffcc;
-}
-
-.about, .who-we-are, .benefits, .features, .pricing, .contact {
-    padding: 60px 20px;
-}
-
-.about h2, .who-we-are h2, .benefits h2, .features h2, .pricing h2, .contact h2 {
-    color: #00ffcc;
-}
-
-.card {
-    border: none;
-    border-radius: 10px;
-}
-
-.contact-form .form-control {
-    background-color: #1c1c1c;
-    color: white;
-    border: none;
-}
-
-.contact-form .form-control::placeholder {
-    color: #cccccc;
-}
-
-footer {
-    background-color: #1c1c1c;
-}
-
-.btn-primary {
-    background-color: #00ffcc;
-    border-color: #00ffcc;
-}
-
-.btn-outline-light {
+/* Footer Styles */
+.footer {
+    background-color: #0a0a0a;
     color: #ffffff;
-    border-color: #00ffcc;
+    padding: 50px 0;
+    position: relative;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
 }
 
-.btn-outline-light:hover {
-    background-color: #00ffcc;
-    color: black;
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #1a1a1a 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.footer .container {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+.footer-logo h2 {
+    color: #00f7ff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.footer-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-links h3 {
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links ul li a {
+    color: #b2b2b2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #00f7ff;
+}
+
+.footer-social a {
+    color: #b2b2b2;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #00f7ff;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #b2b2b2;
+}
+
+.footer-logo-img {
+    width: 100px;
+    height: auto;
 }
